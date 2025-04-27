@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hemant Kumar K - Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Hemant Kumar K</h1>
+        <p>Product Owner | Agile Leader | Cloud & Data Analytics</p>
+        <div class="buttons">
+            <a href="resume.pdf" download class="btn">Download Resume</a>
+            <a href="#contact" class="btn-outline">Contact Me</a>
+        </div>
+    </div>
+</header>
+<section id="about" class="fade-in">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>Results-driven Product Owner with 12+ years of experience...</p>
+    </div>
+</section>
+<section id="skills" class="fade-in">
+    <div class="container">
+        <h2>Skills</h2>
+        <ul>
+            <li>Agile Execution & Product Backlog Management</li>
+            <li>Cloud (AWS, Azure) & Data Analytics</li>
+            <li>Technical Solutioning & Requirements Engineering</li>
+            <li>Stakeholder Collaboration & UX Design Integration</li>
+            <li>Tools: JIRA, Confluence, GitHub, Rally, Power BI, Figma</li>
+            <li>Programming: C, C++, C#, Python, ST</li>
+        </ul>
+    </div>
+</section>
+<section id="experience" class="fade-in">
+    <div class="container">
+        <h2>Experience</h2>
+        <div class="job">
+            <h3>Senior Product Owner - Rockwell Automation</h3>
+            <p>May 2023 – Present | Cloud (SaaS) & Data Analytics | Asset Intelligence</p>
+        </div>
+        <div class="job">
+            <h3>Product Owner - GE Transportation (Wabtec Corp.)</h3>
+            <p>April 2016 – May 2023 | Digital Transport Intelligence</p>
+        </div>
+        <div class="job">
+            <h3>Lead Engineer - HCL Technologies</h3>
+            <p>Feb 2015 – Feb 2016 | Cloud & Data Engineering | Aviation Domain</p>
+        </div>
+        <div class="job">
+            <h3>Software Engineer - Honeywell Technologies & Cyient Ltd.</h3>
+            <p>Dec 2012 – Feb 2015 | Aviation Domain</p>
+        </div>
+    </div>
+</section>
+<section id="education" class="fade-in">
+    <div class="container">
+        <h2>Education</h2>
+        <p>B.Tech in Applied Electronics & Instrumentation Engineering</p>
+        <p>Post Graduate Diploma in Embedded and VLSI Design | C-DAC</p>
+    </div>
+</section>
+<section id="projects" class="fade-in">
+    <div class="container">
+        <h2>Projects</h2>
+        <ul>
+            <li>Cloud Adoption and Data Analytics Transformation (Rockwell Automation)</li>
+            <li>Digital Transport Intelligence Platform (Wabtec Corporation)</li>
+            <li>Automation Framework Development using Python (HCL Technologies)</li>
+        </ul>
+    </div>
+</section>
+<section id="contact" class="fade-in">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>📧 <a href="mailto:hemant0625@gmail.com">hemant0625@gmail.com</a></p>
+        <p>🌐 <a href="https://linkedin.com/in/hemantkmr" target="_blank">LinkedIn</a></p>
+        <p>📍 Bangalore, India</p>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <p>© 2025 Hemant Kumar K. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+        });
+    }, appearOptions);
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
+</body>
+</html>
